@@ -1,0 +1,153 @@
+﻿syntax = "proto3";
+
+enum EUI_Action
+{
+	POINTER_ENTER = 0;
+	POINTER_EXIT = 1;
+	POINTER_DOWN = 2;
+	POINTER_UP = 3;
+	POINTER_CLICK = 4;
+	DRAG = 5;
+	DROP = 6;
+	SCROLL = 7;
+	UDPATE_SELECTED = 8;
+	SELECT = 9;
+	DESELECT = 10;
+	MOVE = 11;
+	INITIALIZE_POTENTIAL_DRAG = 12;
+	BEGIN_DRAG = 13;
+	END_DRAG = 14;
+	SUBMIT = 15;
+	CANCEL = 16;
+	VALUE_UPDATED = 17;
+}
+
+enum ETimestampCategory
+{
+	BEGIN_USE = 0;
+	END_USE = 1;
+	ONE_OFF = 2;
+}
+
+enum ELogType
+{
+	PAGE = 0;
+	TOOL = 1;
+}
+
+message Timestamp
+{
+	ETimestampCategory category = 1;
+	int64 loggedTimestamp = 2; // from DateTime.ToBinary()
+}
+
+message UI_Interaction
+{
+	string		name = 1;
+	EUI_Action	action = 2;
+	Timestamp	loggedTimestamp  = 3;
+	string		message = 4;
+}
+
+message TimeLog
+{
+	string		name = 1;
+	ELogType	type = 2;
+	Timestamp	loggedTimestamp = 3;
+	string		message = 4;
+}
+
+message MachineSpec
+{
+	string	deviceModel = 1;
+	string	deviceName = 2;
+	uint32	deviceType = 3; // enum
+	string	deviceUID = 4;
+	int32	gpuID = 5;
+	string	gpuName = 6;
+	uint32	gpuType = 7; // enum
+	string	gpuVendor = 8;
+	int32	gpuVendorID = 9;
+	string	gpuVersion = 10;
+	int32	gpuMemory_mb = 11;
+	bool	gpuMultithread = 12;
+	int32	gpuShaderLvl = 13;
+	int32	maxCubemapSize = 14;
+	int32	maxTextureSize = 15;
+	string	os = 16;
+	uint32	osFamily = 17; // enum
+	string	processorName = 18;
+	int32	processorCount = 19;
+	int32	processorFrequency = 20;
+	uint32	batteryLvl = 21;
+	uint32	batteryStatus = 22; // enum
+	int32	systemMemorySize_mb = 23;
+	int32	supportedRandomWriteTargetCount = 24;
+	int32	supportedRenderTargetCount = 25;
+
+	bool	supports2DArrayTexture = 26;
+	bool	supports32bitsIndexBuffer = 27;
+	bool	supports3DRenderTextures = 28;
+	bool	supports3DTextures = 29;
+	bool	supportsAsyncCompute = 30;
+	bool	supportsAsyncGPUReadback = 31;
+	bool	supportsComputeShader = 32;
+	bool	supportsCubemapArrayTextures = 33;
+	bool	supportsGeometryShaders = 34;
+	bool	supportsGraphicFence = 35;
+	bool	supportsHardwareQuadTopology = 36;
+	bool	supportsGPUDrawCallInstancing = 37;
+	bool	supportsLocationService = 38;
+	bool	supportsMipStreaming = 39;
+	bool	supportsMotionVector = 40;
+	bool	supportsMultisampleAutoResolve = 41;
+	int32	supportsMultisampledTextures = 42;
+	bool	supportsSeparatedRenderTargetsBlend = 43;
+	bool	supportsSetConstantBuffer = 44;
+	bool	supportsSparseTextures = 45;
+	bool	supportsTessellationShaders = 46;
+	int32	supportsTextureWrapMirrorOnce = 47;
+
+	uint32	screenWidth = 48;
+	uint32	screenHeight = 49;
+}
+
+message InteractionSummary
+{
+	string name = 1;
+	uint32 count = 2;
+	uint64 hours = 3;
+	uint64 min = 4;
+	uint64 sec = 5;
+}
+
+message UserData
+{
+	bool	paid = 1;
+	string	licenseID = 2;
+	uint32	sessionCount = 3;
+	bool	tutorialCompletion = 4;
+}
+
+message SessionData
+{
+	UserData		user = 1;
+	string			sessionUID = 2;
+	MachineSpec		sessionMachine = 3;
+	Timestamp		sessionTimestamp = 4;
+
+	repeated TimeLog			pageAndToolLog = 5;
+	repeated UI_Interaction		interactionLog = 6;
+	repeated InteractionSummary pageUseSummary = 7;
+	repeated InteractionSummary toolUseSummary = 8;
+}
+
+message CursorTimelog
+{
+
+}
+
+message SessionCursorHistory
+{
+
+}

@@ -1,0 +1,9 @@
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\bin\Release\netstandard2.0\SingularAnalytics.deps.json
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\bin\Release\netstandard2.0\SingularAnalytics.dll
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\bin\Release\netstandard2.0\SingularAnalytics.pdb
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\obj\Release\netstandard2.0\SingularAnalytics.AssemblyInfoInputs.cache
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\obj\Release\netstandard2.0\SingularAnalytics.AssemblyInfo.cs
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\obj\Release\netstandard2.0\SingularAnalytics.csproj.CoreCompileInputs.cache
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\obj\Release\netstandard2.0\SingularAnalytics.dll
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\obj\Release\netstandard2.0\SingularAnalytics.pdb
+C:\Users\SHSU\source\repos\SingularAnalytics\SingularAnalytics\obj\Release\netstandard2.0\SingularAnalytics.csprojAssemblyReference.cache

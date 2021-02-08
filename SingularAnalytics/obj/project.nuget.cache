@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "0eVY0ujbOclfGR2fjLB72zoF9o3owoD5ypuOncpf3wPq4aEluT7P7wK7lmxS8dKC45LtBvS17PGJSavEQZtuWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SHSU\\source\\repos\\SingularAnalytics\\SingularAnalytics\\SingularAnalytics.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SHSU\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
+    "C:\\Users\\SHSU\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\SHSU\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\SHSU\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\SHSU\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\SHSU\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\SHSU\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
